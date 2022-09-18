@@ -1,7 +1,8 @@
-import App2 from './src/App2';
+import CentralApp from './src/App';
+import Navegacao from './src/nevegacao'
 
 export default function App() {
   return (
-    <App2 />
+    <Navegacao />
   );
 }

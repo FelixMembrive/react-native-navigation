@@ -5,8 +5,18 @@ import { Text, View, StyleSheet } from "react-native";
 
 export default props => {
     return (
-        <View>
-            <Text>Texto2</Text>
+        <View style={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: props.corFundo || "#000"
+        }}>
+            <Text style={{
+                fontSize: 50,
+                color: props.corText || "#FFF"
+                }}>
+                {props.children}
+            </Text>
         </View>
     )
 }
