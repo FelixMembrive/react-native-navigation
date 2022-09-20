@@ -6,8 +6,8 @@ import { Text, View, StyleSheet, Button } from "react-native";
 export default props => {
     return (
         <View style={{ flex: 1, }}>
-            <View style={{flexDirection:"row", justifyContent: "space-around"}}>
-            {props.voltar ?
+            <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+                {props.voltar ?
                     <Button
                         title="Voltar"
                         onPress={() => { props.navigation.goBack() }} /> :
@@ -15,7 +15,12 @@ export default props => {
                 {props.avancar ?
                     <Button
                         title="Avançar"
-                        onPress={() => { props.navigation.navigate(props.avancar) }} /> :
+                        onPress={() => {
+                            props.navigation.navigate(
+                                props.avancar,
+                                props.avancarParams
+                            )
+                        }} /> :
                     false}
             </View>
             <View style={{ flex: 1, }}>
